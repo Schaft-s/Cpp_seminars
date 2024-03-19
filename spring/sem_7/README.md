@@ -14,7 +14,7 @@ operator delete(single); // принимает void*
 operator delete(array);
 ```
 2. Выравнивание
-   - [по человечески](https://ru.stackoverflow.com/questions/435726/Выравнивание-данных)
+   - [по-человечески](https://ru.stackoverflow.com/questions/435726/Выравнивание-данных)
    - **aligned**: int - лежит хорошо, если адрес кратен 4 (замедляется работа, если не так. зависит от процессора)
    - new и malloc возвращают выровненные адреса
    - [std::max_align_t](https://en.cppreference.com/w/cpp/types/max_align_t) == long double == int128_t == 16 - константа системы
@@ -46,7 +46,7 @@ void* operator new(std::size_t size, std::align_val_t alignment);
 void operator delete(void* ptr, std::align_val_t alignment) noexcept;
 ``` 
 3. Битовые поля
-    - [по русски](https://learn.microsoft.com/ru-ru/cpp/cpp/cpp-bit-fields?view=msvc-170)
+    - [по-русски](https://learn.microsoft.com/ru-ru/cpp/cpp/cpp-bit-fields?view=msvc-170)
     - нельзя адрес брать
 ```c++
 struct S {
