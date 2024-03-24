@@ -16,7 +16,9 @@
       }
       ```
     - [Google style guide](https://google.github.io/styleguide/cppguide.html#Exceptions)  - **We do not use C++ exceptions.**
+
   - [Тут на русском, много и хорошо](https://metanit.com/cpp/tutorial/6.1.php)
+  - [Лекции Мещерина про исключения](https://www.youtube.com/watch?v=JUofjC1GXwc&list=PL4_hYwCyhAvazfCDGyS0wx_hvBmnAAf4h&index=18), они для продвы, но более чем понятны любому 
   - Оператор noexcept - существует, проверяет есть ли спецификатор в объявлении функции... (не выполняет выражение внутри, delere ..)
   - Условный noexcept:
 ```c++
