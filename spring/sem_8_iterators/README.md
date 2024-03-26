@@ -77,6 +77,7 @@ public:
 };
 
 ```
+  - (Ещё пример написания своего итератора](https://habr.com/ru/articles/265491/)
 5. [Класс Subrange](https://en.cppreference.com/w/cpp/ranges/subrange)
   - Реализуйте класс Subrange, аналог std::ranges::subrange
   - Принимающий пару итераторов и позволяющий пройти по нему как по последовательности элементов от begin до end
