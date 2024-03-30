@@ -8,4 +8,7 @@
 2. [] & at == SegFault & Exception
     - Можно поймать & нельзя поймать..
     - 2 оператора проверяют dynamic_cast (std::bad_cast), new (std::bad_alloc)
-3. 
+3. Лишние копирования в throw [файл](exceptions_1.cpp)
+4. Приведение типов в caught [файл](exceptions_2.cpp)
+    - с точностью до ковариантных типов
+5. 
