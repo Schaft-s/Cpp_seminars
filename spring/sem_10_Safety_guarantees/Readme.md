@@ -1,4 +1,8 @@
 0. **Exceptions**
+    - Что такое? Ключевые слова
+    - Не любая ошибка == исключение!
+    - Копирования?
+    - Unwinding stack
 1. **Исключения в конструкторах и деструкторах**
     - Проблема частно в утечке памяти! (RAII)
     - function try block
@@ -61,4 +65,7 @@ void safe_uninitialized_fill(ForwardIt first, ForwardIt last, const T& value) {
 }
 
 ```
-7. df
+7. **Бонусы**
+    - [Релизация](https://www.youtube.com/watch?v=_wE7JYfcKN0) std::vector от Мещерина
+    - [Статья](https://habr.com/ru/articles/126374/) на хабре про гарантии безопасности
+    - 
