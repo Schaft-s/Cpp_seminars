@@ -69,4 +69,4 @@ void safe_uninitialized_fill(ForwardIt first, ForwardIt last, const T& value) {
 7. **Бонусы**
     - [Релизация](https://www.youtube.com/watch?v=_wE7JYfcKN0) std::vector от Мещерина
     - [Статья](https://habr.com/ru/articles/126374/) на хабре про гарантии безопасности
-    - 
+    - [Хабр:](https://habr.com/p/806239/) Разработчик взломал компилятор C++ 28-летней давности, чтобы проект поддерживал исключения 
