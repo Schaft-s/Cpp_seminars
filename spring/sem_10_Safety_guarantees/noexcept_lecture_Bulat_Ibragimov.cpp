@@ -7,7 +7,7 @@ void Stack<T>::Reallocate(size_t new_capacity) {
     
     auto new_buffer = new_capacity > 0 ? new T[new_capacity] : nullptr;
     auto new_size = std::min(size_, new_capacity);
-    for (size_t i = 0; i < new_size; ++i) {  // проверка на внимательность, что не так
+    for (size_t i = 0; i < new_size; ++i) {
     	new_buffer[i] = buffer_[i];
     }
 
@@ -32,7 +32,7 @@ void Stack<T>::Reallocate(size_t new_capacity) {
     auto new_size = std::min(size_, new_capacity);
     try {
         for (size_t i = 0; i < new_size; ++i) {
-    	    new_buffer[i] = buffer_[i];  // копирование? зачем?
+    	    new_buffer[i] = buffer_[i];
         }
     } catch (...) {
     	delete[] new_buffer;
@@ -58,7 +58,7 @@ void Stack<T>::Reallocate(size_t new_capacity) {
     try {
         for (size_t i = 0; i < new_size; ++i) {
     	    new_buffer[i] = std::move(buffer_[i]);
-        }  // а если переместили часть и сломались
+        }
     } catch (...) {
     	delete[] new_buffer;
     	throw;
@@ -88,7 +88,7 @@ void Stack<T>::Reallocate(size_t new_capacity) {
         }
     } catch (...) {
     	for (size_t i = 0; i < moved_cnt; ++i) {
-    		buffer_[i] = std::move(new_buffer[i]);  // а если снова исключение??) рекурсивно туда сюда мучаемся
+    		buffer_[i] = std::move(new_buffer[i]);
     	}
     	delete[] new_buffer;
     	throw;
