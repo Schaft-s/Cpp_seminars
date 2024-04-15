@@ -4,9 +4,9 @@
     - [constexpr](https://en.cppreference.com/w/cpp/language/constexpr)
     - [consteval](https://en.cppreference.com/w/cpp/language/consteval)
     - [constinit](https://en.cppreference.com/w/cpp/language/constinit)
-    - [Факториал](https://rickywxg.github.io/2021/01/03/cpp-compile-time-computation.html) с С++98 до наших дней
+    - [Факториал](https://rickywxg.github.io/2021/01/03/cpp-compile-time-computation.html) с С++98 до наших дней.
     - 
-2. **constexpr** == *может* быть вычислено в compile-time
+2. **constexpr** == *может* быть вычислено в compile-time.
     - нельзя вызывать не costexpr функции!  std::cout?
     - не constexpr конструкторы?  а что со стандартными? vector? string?
     - function-try-block до c++20
@@ -61,7 +61,7 @@ auto g(T x) {
     else return 1u;
 }  
 ```
-    - конкретно так нельзя, потому что статически типизированный язык, а тут разный тип может быть
+    - конкретно так нельзя, потому что статически типизированный язык, а тут разный тип может быть.
 ```cpp
 template <typename T>
 auto g() {
@@ -69,7 +69,7 @@ auto g() {
     else return 1u;
 }  
 ```
-    - это ок, if constexpr выполняется раньше
+    - это ок, if constexpr выполняется раньше.
 6. **trailing return type**
 ```cpp
 template <typename T>
@@ -116,7 +116,7 @@ func<'a'>(); // выводит 'a'
     - Compile-time
     - ```std::vector<decltype(x)> a```
     - **не отбрасывает ссылки!**
-    - [статья](https://habr.com/ru/articles/206458/) про decltype и auto 2013 года - старая, "но не бесполезная"
+    - [статья](https://habr.com/ru/articles/206458/) про decltype и auto 2013 года - старая, "но не бесполезная".
   
 ```cpp
 int x = 0;
@@ -148,15 +148,15 @@ printf("%d %d", x,u);
 12. **decltype в возвращаемом типе**
 ```cpp
 template <typename T>
-auto &(\&) getElement(Container&cont, size_t index)  // ссылку можно навесить, но не всегда будет работать
+auto &(\&) getElement(Container&cont, size_t index)  // ссылку можно навесить, но не всегда будет работать.
 -> decltype(cont[index])
 { return cont[index] }
 
-decltype(auto) ... // ровно то же самое. == "выведи тип сам, но по правилам decltype, а не auto"
+decltype(auto) ... // ровно то же самое. == "выведи тип сам, но по правилам decltype, а не auto".
 ```
 13. Бонусы
-    - если кто-то сможет решить сt_prime короче чем в 26 строк (не учитываются) include, pragma once, пропуски строк
+    - если кто-то сможет решить сt_prime короче чем в 26 строк (не учитываются) include, pragma once, пропуски строк.
     - с меня ... (обсуждается)
-    - [Лекция](https://www.youtube.com/watch?v=MT8IomEEZPY&ab_channel=%D0%9B%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B9%D0%A4%D0%9F%D0%9C%D0%98) Мещерина про Compile-time-computations
-    - Огромная [статья](https://habr.com/ru/articles/579490/) про развитие const_ (в ней есть код метода, решающий пол задачки ct_prime)
-    - 
+    - [Лекция](https://www.youtube.com/watch?v=MT8IomEEZPY&ab_channel=%D0%9B%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B9%D0%A4%D0%9F%D0%9C%D0%98) Мещерина про Compile-time-computations.
+    - Огромная [статья](https://habr.com/ru/articles/579490/) про развитие const_ (в ней есть код метода, решающий пол задачки ct_prime).
+    - Ещё [статья](https://www.jacksondunstan.com/articles/5875), на английском, но суперподробная.
