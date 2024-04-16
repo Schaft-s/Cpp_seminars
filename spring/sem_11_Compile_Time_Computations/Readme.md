@@ -155,7 +155,7 @@ auto &(\&) getElement(Container&cont, size_t index)  // ссылку можно 
 decltype(auto) ... // ровно то же самое. == "выведи тип сам, но по правилам decltype, а не auto".
 ```
 13. Бонусы
-    - если кто-то сможет решить сt_prime короче чем в 26 строк (не учитываются) include, pragma once, пропуски строк.
+    - если кто-то сможет решить сt_prime короче чем в 26 строк (не учитываются include, pragma once, пропуски строк)
     - с меня ... (обсуждается)
     - [Лекция](https://www.youtube.com/watch?v=MT8IomEEZPY&ab_channel=%D0%9B%D0%B5%D0%BA%D1%82%D0%BE%D1%80%D0%B8%D0%B9%D0%A4%D0%9F%D0%9C%D0%98) Мещерина про Compile-time-computations.
     - Огромная [статья](https://habr.com/ru/articles/579490/) про развитие const_ (в ней есть код метода, решающий пол задачки ct_prime).
