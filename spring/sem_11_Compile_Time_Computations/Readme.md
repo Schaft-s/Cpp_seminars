@@ -14,7 +14,7 @@
     - [virtual](https://www.cppstories.com/2021/constexpr-virtual/)?
     - Вопрос на удос:
 ```cpp
-constexpr int sqr(int x){ return x*x }
+constexpr int sqrt(int x){ return x*x }
 
 int x;
 std::cin >> x;
