@@ -12,6 +12,7 @@
     - function-try-block до c++20
     - что с new? (файлик)
     - [virtual](https://www.cppstories.com/2021/constexpr-virtual/)?
+    - Вопрос на удос:
 ```cpp
 constexpr int sqr(int x){ return x*x }
 
