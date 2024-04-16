@@ -26,7 +26,7 @@ std::array<int, n>  a;
 3. **Вопрос на хор**
 ```cpp
 const int i = 2;
-const char array[ i == 2 ? 64 : throw exception() ];
+const char array[ i == 2 ? 64 : throw exception() ] = {};
 ```
 4. **Волшебное слово auto**
     - умеем объявлять переменные: ```auto x =...; auto* x = ...```
