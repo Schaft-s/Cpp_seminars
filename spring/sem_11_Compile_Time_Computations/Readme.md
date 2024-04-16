@@ -14,13 +14,13 @@
     - [virtual](https://www.cppstories.com/2021/constexpr-virtual/)?
     - Вопрос на удос:
 ```cpp
-constexpr int sqrt(int x){ return x*x }
+constexpr int sqr(int x){ return x*x }
 
 int x;
 std::cin >> x;
-std::cout << sqrt(x) << '\n';
+std::cout << sqr(x) << '\n';
 
-constexpr int n = sqrt(5);
+constexpr int n = sqr(5);
 std::array<int, n>  a;
 ```
 3. **Вопрос на хор**
