@@ -5,6 +5,7 @@
     - CT-вычисления
     - 
 2. [Метапрограммирование](https://en.cppreference.com/w/cpp/meta)
+    - [ЛЕКЦИЯ](Metaprogramming.pdf)
     - [type_traits](https://en.cppreference.com/w/cpp/header/type_traits)
       - Напишите **"is_array"**
       - Напишите **"add_cv"**
