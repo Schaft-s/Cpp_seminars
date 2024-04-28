@@ -9,8 +9,21 @@
     - [type_traits](https://en.cppreference.com/w/cpp/header/type_traits)
       - Напишите **"is_array"**
       - Напишите **"add_cv"**
-    - [ct_prime](README_ct_prime.md)
-    - [array_traits](README_array_traits.md)
+    - Условия задач на эту тему из следующего контеста - [ct_prime](README_ct_prime.md), [array_traits](README_array_traits.md)
+    - **type_traits** в C++ — это набор шаблонных классов и функций, которые предоставляются стандартной библиотекой для работы с типами во время компиляции. Они используются для получения информации о типах данных, такой как проверка на константность, поддержка арифметики, определение категорий типов и многое другое. Эти утилиты помогают писать более обобщенный и безопасный код.
+    - **integral_constant** — это шаблон структуры, который позволяет представлять типы и значения во время компиляции.
+    - **integer_sequence** представляет собой шаблон класса, который используется для создания последовательности целых чисел во время компиляции. Пример:
+```cpp
+template<typename T, T... ints>
+void print_sequence(std::integer_sequence<T, ints...> int_seq) {
+    ((std::cout << ints << ' '), ...);
+}
+
+int main() {
+    print_sequence(std::integer_sequence<int, 1, 2, 3, 4, 5>{});
+    return 0;
+}
+```
     - 
 3. CMake и устройство тестов
     - add_subdirectory/set/add_executable
