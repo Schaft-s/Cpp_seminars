@@ -76,7 +76,7 @@ int main() {
       - Можно ли присвоить элемент?
       - Существует ли небросающий конструктор?
       - Полиморфность класса? 
-6. **SRTP** == curiously recurring template pattern
+6. **CRTP** == curiously recurring template pattern
     - Rational ><==! ?
     - Mixin == Подмешивание
     - [Хабр](https://habr.com/ru/articles/210894/), [статья](https://nuancesprog.ru/p/15557/).  
