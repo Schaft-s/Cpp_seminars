@@ -29,7 +29,7 @@ telnet towel.blinkenlights.nl - смотреть звездные войны
 Подробнее [тут](https://losst.pro/prikolnye-komandy-linux)
 
 ## Основная часть
-  - [Презентация](Types.pdf) от лектора.
+  - [Презентация](Types.pdf) от лектора - Ибрагимова Булата Ленаровича, предоставлена для студентов МФТИ.  
   - Типы данных в [учебнике](https://education.yandex.ru/handbook/cpp/article/data-types) от Яндекса.
 #### 1. Из чего состоит программа на C++?
 
