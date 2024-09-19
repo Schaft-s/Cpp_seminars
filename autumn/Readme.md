@@ -2,5 +2,5 @@
 
 **Все презентации сделаны лектором и предоставлены для студентов МФТИ. Лектор - Ибрагимов Булат Ленарович.**
 
-Если очень хочется - можно смотреть [эти](https://github.com/konopleva-karina/cpp_seminars_base) конспекты
+Если очень хочется - можно смотреть [эти](https://github.com/konopleva-karina/cpp_seminars_base) конспекты или [эти](https://github.com/Artemmm91/Conspects)
 
