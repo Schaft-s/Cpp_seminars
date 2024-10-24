@@ -214,7 +214,7 @@ void f() {
 }
 ```
 
-## CMake
+## CMake [4]
 CMake — это инструмент для автоматизации сборки, который генерирует файлы сборки (например, Makefile для Unix или проектные файлы для Visual Studio) на основе конфигурационных файлов. CMake помогает управлять большими проектами и их зависимостями, упрощая процесс компиляции и линковки.
 
 #### Основные компоненты CMake:
@@ -312,3 +312,4 @@ add_test(NAME MyTest COMMAND MyExecutable)
 - [1] [Статья](https://habr.com/ru/articles/334988/) на хабре про struct, union, enum.
 - [2] [Статья](https://tproger.ru/translations/art-of-structure-packing) про выравнивание
 - [3] [Статья](https://habr.com/ru/companies/playrix/articles/465181/) где рассказывается про структурное связывание
+- [4] [Видео](https://www.youtube.com/watch?v=mrm39JmvJ1c&ab_channel=S0ER) по CMake
