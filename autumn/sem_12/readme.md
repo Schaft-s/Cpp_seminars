@@ -21,6 +21,142 @@ _Позволяет изменить интерпретацию битов в п
   - `int ( * ( * a ) [3] ) (float, float)` - Указатель на массив из 3 указателей на функции int(float, float)
 _Материал предоставлен на лекциях Ибрагимова Булата Ленаровича для студентов МФТИ._
 
-##
 
+## Часть 1: Библиотека алгоритмов
+
+### Введение в библиотеку алгоритмов
+- **Библиотека `<algorithm>`** в C++ предоставляет большой набор стандартных алгоритмов для работы с контейнерами: сортировка, поиск, модификация данных и.т.д.
+- Алгоритмы работают через итераторы, предоставляя универсальный интерфейс для последовательностей
+
+### Передача функторов в алгоритмы
+- Для повышения гибкости стандартные алгоритмы принимают **функторы** — объекты, вызываемые как функции. Функторы позволяют задать специфическое поведение для алгоритма, например:
+  - Порядок сортировки в `std::sort`.
+  - Условие поиска в `std::find_if`.
+
+### **1. Передача указателей на функции**
+- Указатель на функцию — это самый простой способ передачи логики в алгоритмы.  
+Пример: использование функции-компаратора в `std::sort`.
+
+```cpp
+#include <iostream>
+#include <algorithm>
+bool descending(int a, int b) {
+    return a > b;
+}
+int main() {
+    int arr[] = {5, 2, 9, 1, 5, 6};
+    std::sort(arr, arr + 6, descending);
+
+    // for (int x : arr) std::cout << x << " ";
+    return 0;
+}
+```
+
+```cpp
+#include <iostream>
+#include <algorithm>
+
+bool krat3(int x) {
+    return x % 3 == 0;
+}
+
+int main() {
+    int arr[] = {10, 20, 30, 40, 50};
+    int* found = std::find_if(arr, arr + 5, krat3);
+
+    if (found != arr + 5) {
+        std::cout << "Элемент найден: " << *found << "\n";
+    } else {
+        std::cout << "Элемент не найден.\n";
+    }
+}
+
+```
+### **2. Использование стандартных функторов**
+- В `<functional>` представлены готовые функторы: `std::greater`, `std::less`, `std::equal_to` и т.д.
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <functional> // std::greater
+
+int main() {
+    int arr[] = {3, 1, 4, 1, 5, 9};
+
+    // std::greater<> задаёт обратный порядок
+    std::sort(arr, arr+6, std::greater<>());
+
+    //for (int x : arr) std::cout << x << " ";
+    return 0;
+}
+```
+### Ещё функции
+- std::find - ищет первый элемент, равный заданному значению
+- std::all_of, std::any_of, std::none_of - проверяют, удовлетворяют ли элементы контейнера заданному условию
+- std::binary_search - определяет, есть ли элемент в отсортированном контейнере
+- std::partial_sort - sортирует только часть диапазона, оставляя остальные элементы.
+- std::nth_element - n-я порядковая статистика
+- std::stable_sort
+- std::unique
+- std::reverse
+- std::rotate(vec.begin(), vec.begin() + 2, vec.end()); // Сдвиг влево
+- std::transform(vec.begin(), vec.end(), vec.begin(), [](int x) { return x * x; });
+- std::remove, std::remove_if
+- std::fill, std::generate(vec.begin(), vec.end(), []() { return rand() % 100; });
+- ...
+
+  
+##  Псевдонимы типов с помощью `using`
+
+### Базовый синтаксис `using`
+```cpp
+using ИмяПсевдонима = СуществующийТип;
+```
+
+```cpp
+#include <iostream>
+#include <vector>
+
+// Сокращаем длинное имя типа
+using VecInt = std::vector<int>;
+
+int main() {
+    VecInt vec = {1, 2, 3, 4};
+    for (int x : vec) {
+        std::cout << x << " ";
+    }
+    return 0;
+}
+```
+
+---
+
+#### Шаблонные псевдонимы с `using`
+- `using` позволяет создавать псевдонимы для шаблонных типов, включая контейнеры.
+
+Пример:
+```cpp
+#include <iostream>
+#include <array>
+
+// Шаблонный псевдоним для двумерного массива
+template <class T, int N, int M>
+using Array2D = std::array<std::array<T, M>, N>;
+
+int main() {
+    Array2D<int, 2, 3> matrix = {{
+        {1, 2, 3},
+        {4, 5, 6}
+    }};
+
+    for (const auto& row : matrix) {
+        for (int val : row) {
+            std::cout << val << " ";
+        }
+        std::cout << "\n";
+    }
+
+    return 0;
+}
+```
 
